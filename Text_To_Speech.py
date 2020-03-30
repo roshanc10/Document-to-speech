@@ -20,14 +20,14 @@ def TextSpeechConverter(fldr_name):
         print(filename)
         text = docxpy.process(filename)
 
-        path_of_output="C:/Users/roshan/Documents/"
+        path_of_output="C:/Users/user/Documents/"  #this is the path to generate file
         try:
             os.mkdir(os.path.join(path_of_output,"text"))
         except:
             pass
 
         text_file = filename.split("\\")[-1].replace(".docx",".txt")
-        with open("C:/Users/roshan/Documents/text/"+text_file,"w",encoding='utf-8') as file:
+        with open("C:/Users/user/Documents/text/"+text_file,"w",encoding='utf-8') as file:
             file.write(text) 
         try:
             os.mkdir(os.path.join(path_of_output,"audio"))
@@ -49,7 +49,7 @@ def TextSpeechConverter(fldr_name):
 
 
 #filename='D:/All_projects_data/Data Science/audio/dts/Input/Neural Networks and Deep Learning.docx'
-fldr_name='C:/Users/roshan/Documents/input/'
+fldr_name='C:/Users/user/Documents/input/'  #this is the input folder where all files to be processed should be kept.
 TextSpeechConverter(fldr_name)
 
 # extract text and write images in /tmp/img_dir
