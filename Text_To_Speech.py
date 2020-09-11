@@ -4,15 +4,20 @@ Created on Mon Feb 24 16:33:18 2020
 
 @author: user
 """
+import docxpy,os,sys,time
+from gtts import gTTS
+from glob import glob
 
 def Text2Speech(text_result):
     language = 'en'
     audio_obj = gTTS(text = text_result, lang = language, slow = False)
     return audio_obj
 
-import docxpy,os,sys,time
-from gtts import gTTS
-from glob import glob
+def makedir():
+    try:
+        os.mkdir(os.path.join(os.getcwd(),"input"))
+    except:
+        pass
 
 def TextSpeechConverter(fldr_name):
     start_Time=time.time()
@@ -49,6 +54,7 @@ def TextSpeechConverter(fldr_name):
 
 
 #filename='D:/All_projects_data/Data Science/audio/dts/Input/Neural Networks and Deep Learning.docx'
+makedir()
 fldr_name='C:/Users/user/Documents/input/'  #this is the input folder where all files to be processed should be kept.
 TextSpeechConverter(fldr_name)
 
