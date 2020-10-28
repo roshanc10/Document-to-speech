@@ -19,7 +19,9 @@ gTTS (Google Text-to-Speech), a Python library and CLI tool to interface with Go
 Writes spoken mp3 data to a file, a file-like object (bytestring) for further audio manipulation, or stdout.
 It features flexible pre-processing and tokenizing, as well as automatic retrieval of supported languages.
 
-
 Uses:
 
 This can be used as for ease for document reading and understanding. Also used to read books and long documents. Just play the mp3 generated in audio folder and enjoy.
+
+Note: 
+"C:/Users/user/Documents/input/ " in this, path is default you can change the /user/ to your requried username.
